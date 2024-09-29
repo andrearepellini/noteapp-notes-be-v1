@@ -19,7 +19,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Note'
+                  $ref: '#/components/schemas/NoteDto'
     post:
       summary: Create a new note
       operationId: createNote
@@ -28,14 +28,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/NoteInput'
+              $ref: '#/components/schemas/NoteInputDto'
       responses:
         '201':
           description: Note created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Note'
+                $ref: '#/components/schemas/NoteDto'
 
   /notes/{id}:
     get:
@@ -53,7 +53,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Note'
+                $ref: '#/components/schemas/NoteDto'
         '404':
           description: Note not found
     put:
@@ -70,14 +70,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/NoteInput'
+              $ref: '#/components/schemas/NoteInputDto'
       responses:
         '200':
           description: Note updated
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Note'
+                $ref: '#/components/schemas/NoteDto'
         '404':
           description: Note not found
     delete:
@@ -97,7 +97,7 @@ paths:
 
 components:
   schemas:
-    Note:
+    NoteDto:
       type: object
       properties:
         id:
@@ -111,7 +111,7 @@ components:
         - title
         - content
 
-    NoteInput:
+    NoteInputDto:
       type: object
       properties:
         title:
