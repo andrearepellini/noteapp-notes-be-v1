@@ -95,7 +95,6 @@
 							<configOptions>
 								<useSpringBoot3>true</useSpringBoot3>
 								<openApiNullable>false</openApiNullable>
-								<delegatePattern>true</delegatePattern> <!-- Optional: Use delegate pattern for cleaner separation -->
 								<interfaceOnly>true</interfaceOnly> <!-- Only generate interfaces -->
 								<skipDefaultInterface>true</skipDefaultInterface> <!-- Do not generate default interfaces -->
 							</configOptions>
