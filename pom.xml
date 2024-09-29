@@ -47,7 +47,24 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+			<version>1.18.34</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>1.5.5.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>1.5.5.Final</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok-mapstruct-binding</artifactId>
+			<version>0.2.0</version>
 		</dependency>
 	</dependencies>
 
@@ -96,8 +113,9 @@
 							<inputSpec>${project.basedir}/src/contract/resources/api-notes.yaml</inputSpec> <!-- Path to your YAML file -->
 							<generatorName>spring</generatorName> <!-- Generator for Spring framework -->
 							<output>${project.build.directory}/generated-sources/openapi</output> <!-- Output to target/generated-sources -->
-							<apiPackage>com.example.api</apiPackage> <!-- Your desired package for APIs -->
-							<modelPackage>com.example.model</modelPackage> <!-- Your desired package for DTOs -->
+							<apiPackage>com.example.notes_be_v1.api</apiPackage> <!-- Your desired package for APIs -->
+							<modelPackage>com.example.notes_be_v1.model</modelPackage> <!-- Your desired package for DTOs -->
+							<packageName>com.example.notes_be_v1</packageName>
 							<configOptions>
 								<useSpringBoot3>true</useSpringBoot3>
 								<openApiNullable>false</openApiNullable>
