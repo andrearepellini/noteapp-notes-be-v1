@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: note-be-v1
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notesdb
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
