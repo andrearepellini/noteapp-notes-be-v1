@@ -7,8 +7,10 @@ servers:
   - url: http://localhost:8080
     description: Local development server
 paths:
-  /notes:
+  /api/notes:
     post:
+      tags:
+        - notes
       summary: Create a new note
       operationId: createNote
       requestBody:
@@ -24,8 +26,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NoteDto'
-  /notes/all:
+  /api/notes/all:
     get:
+      tags:
+        - notes
       summary: Get all notes
       operationId: getAllNotes
       responses:
@@ -37,8 +41,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/NoteDto'
-  /notes/{id}:
+  /api/notes/{id}:
     get:
+      tags:
+        - notes
       summary: Get a note by ID
       operationId: getNoteById
       parameters:
@@ -58,6 +64,8 @@ paths:
         '404':
           description: Note not found
     put:
+      tags:
+        - notes
       summary: Update an existing note
       operationId: updateNote
       parameters:
@@ -83,6 +91,8 @@ paths:
         '404':
           description: Note not found
     delete:
+      tags:
+        - notes
       summary: Delete a note
       operationId: deleteNote
       parameters:

@@ -117,6 +117,7 @@
 							<modelPackage>com.example.notes_be_v1.model</modelPackage> <!-- Your desired package for DTOs -->
 							<packageName>com.example.notes_be_v1</packageName>
 							<configOptions>
+								<useTags>true</useTags>
 								<useSpringBoot3>true</useSpringBoot3>
 								<openApiNullable>false</openApiNullable>
 								<interfaceOnly>true</interfaceOnly> <!-- Only generate interfaces -->
