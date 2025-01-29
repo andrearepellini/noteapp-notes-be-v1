@@ -8,11 +8,13 @@ import com.example.notes_be_v1.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5173")  // Allowing CORS from frontend
 public class NoteController implements NotesApi {
 
     @Autowired
